@@ -85,3 +85,9 @@ footer {
     width: 100%;
     font-size: 30px;  
 }
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr; /* Only one column is displayed */
+    }
+}
