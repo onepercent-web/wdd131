@@ -4,31 +4,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // display current year
     currentYear.textContent = new Date().getFullYear();
-
     lastModified.textContent = `Last Modification: ${document.lastModified}`;
 
+    // humberger menu
+    const menuButton = document.createElement('button');
+    menuButton.className = 'menu-button';
+    menuButton.innerHTML = '&#9776;'; // Hamburger Icon
+    const header = document.querySelector('header');
+    header.appendChild(menuButton);
 
-  // humberger menu
-  const menu = document.getElementById('menu');
-  const menuButton = document.createElement('button');
-  menuButton.innerHTML = '&#9776;'; // Hamburger Icon
-  menuButton.classList.add('menu-button');
-  document.querySelector('header').insertBefore(menuButton, menu);
+    const menu = document.getElementById('menu');
+    const menuList = menu.querySelector('ul');
 
-  // menu click
-  menuButton.addEventListener('click', function() {
-      const isVisible = menu.style.display === 'block';
-      menu.style.display = isVisible ? 'none' : 'block';
-      menuButton.innerHTML = isVisible ? '&#9776;' : '&times;'; // Show "X" when menu is open
-  });
+    // menu click
+    menuButton.addEventListener('click', function() {
+        const isOpen = menuList.classList.contains('is-active');
+        menuList.classList.toggle('is-active');
+        menuButton.innerHTML = isOpen ? '&#9776;' : '&times;'; 
+    });
 
-  window.addEventListener('resize', function() {
-      if (window.innerWidth > 600) {
-          menu.style.display = 'block'; // Always display menu at 600px or more
-          menuButton.style.display = 'none'; // menu button is hidden
-      } else {
-          menu.style.display = 'none'; // Hide menu at less than 600px
-          menuButton.style.display = 'block'; // display menu button
-      }
-  });
+    // ウィンドウのリサイズ時にメニューの表示を調整
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 600) {
+            menuList.style.display = 'flex'; // Always display menu at 600px or more
+            menuButton.style.display = 'none'; // Menu button is hidden
+        } else {
+            menuList.style.display = 'none'; // Hide menu at less than 600px
+            menuButton.style.display = 'block'; // Show menu button
+        }
+    });
 });
