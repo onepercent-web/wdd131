@@ -1,0 +1,151 @@
+media-query.html の「query」とは、CSSのメディアクエリ（media query）を指します。
+メディアクエリは、特定の条件（例えば画面の幅や高さ、解像度など）に基づいて、CSSスタイルを適用するための手法です。
+
+メディアクエリの主な目的は、さまざまなデバイスや画面サイズに対応するレスポンシブデザインを実現することです。
+これにより、ウェブページがデスクトップ、タブレット、スマートフォンなど、どんなデバイスでも適切に表示されるようにすることができます。
+
+メディアクエリの基本構造
+以下はメディアクエリの基本的な構造です：
+
+css:
+
+@media mediatype and (条件) {
+  /* 条件が満たされた場合に適用するCSSルール */
+}
+
+・@media: メディアクエリの開始を示します。
+・mediatype: 対象とするメディアの種類（例：screen、printなど）。
+・(条件): 条件（例：画面の幅、解像度、向きなど）。
+
+_____________________________________________________________________________________________________________________________________________
+メディアクエリの使用例
+
+以下にHTMLとCSSを使った具体的な例を示します。
+
+HTMLファイル (index.html):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> #意味: これは文書の文字エンコーディングを指定します。　
+                           #役割: UTF-8は、ほとんどの言語の文字を正しく表示できるエンコーディング方式です。これにより、日本語や他の特殊な文字も正しく表示されます。
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                           #意味: これはビューポートの設定を行います。
+                           #役割: width=device-widthはデバイスの幅に合わせることを意味し、initial-scale=1.0は初期ズームレベルを設定します。
+                           #これにより、モバイルデバイスでの表示が適切に行われ、レスポンシブデザインをサポートします。
+    <title>メディアクエリの例</title>
+                           #意味: これはページのタイトルを指定します。
+                           #役割: ブラウザのタブや検索エンジンの結果に表示されるページのタイトルを設定します。
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>メディアクエリの例</h1>
+    </header>
+    <main>
+        <section>
+            <h2>セクション1</h2>
+            <p>これはセクション1の内容です。</p>
+        </section>
+        <section>
+            <h2>セクション2</h2>
+            <p>これはセクション2の内容です。</p>
+        </section>
+    </main>
+    <footer>
+        フッターの内容
+    </footer>
+</body>
+</html>
+
+
+CSSファイル (styles.css):
+
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, main, footer {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+/* 画面幅が600px以上の場合に適用するスタイル */
+@media screen and (min-width: 600px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+説明
+基本スタイル:
+
+body, header, main, footer には基本的なスタイルが適用されています。これにはフォントの設定やマージン、パディング、ボックスモデルの設定などが含まれます。
+メディアクエリの条件:
+
+@media screen and (min-width: 600px) は画面幅が600ピクセル以上の場合に適用されるスタイルを示します。
+条件が満たされた場合のスタイル:
+
+画面幅が600ピクセル以上の場合、main 要素は2列のグリッドレイアウトに変更されます。
+header と footer の背景色が黒 (#333) に変更され、文字色が白 (#fff) に変更されます。
+メディアクエリの利用方法
+
+HTMLファイルにCSSファイルをリンク:
+
+<link rel="stylesheet" href="styles.css"> タグを使用して、HTMLファイルにCSSファイルをリンクします。
+CSSファイルにメディアクエリを記述:
+
+CSSファイル内で、必要な条件を指定してメディアクエリを記述します。
+
+_____________________________________________________________________________________________________________________________________________
+追加の例
+
+以下はさらに画面幅が800ピクセル以上の場合のメディアクエリの例です。
+
+css:
+
+/* 画面幅が800px以上の場合に適用するスタイル */
+@media screen and (min-width: 800px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    header, footer {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+この例では、画面幅が800ピクセル以上の場合に、main 要素は3列のグリッドレイアウトに変更され、header と footer の背景色が黒に、文字色が白に変更されます。
+
+これで、メディアクエリの基本的な使い方とその目的について理解できたと思います。
+メディアクエリを活用することで、異なるデバイスに対応した柔軟なウェブデザインを実現することができます。
