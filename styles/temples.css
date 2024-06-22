@@ -98,29 +98,49 @@ footer {
     cursor: pointer;
 }
 
+/* Mobile views adjustments */
 @media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+    
+    figure {
+        margin: 0; /* Remove margins for tighter mobile layout */
+        padding: 10px 0; /* Add some vertical padding */
+    }
+    
+    img {
+        width: 100%; /* Ensure images are full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
     .menu-button {
-        display: block;
+        display: block; /* Ensure the menu button is displayed */
     }
 
     #menu ul {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
+        display: none; /* Hide menu until activated */
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width */
+        position: fixed; /* Overlay on top of other content */
+        background-color: #333; /* Menu background color */
+        top: 60px; /* Offset from top */
+        left: 0; /* Align to left edge */
     }
 
     #menu ul.is-active {
-        display: flex;
+        display: flex; /* Show menu when active */
     }
 
     #menu ul li {
-        text-align: center;
-        padding: 10px;
-        width: 100%;
+        text-align: center; /* Center align text in menu */
+        padding: 15px; /* Larger tap area for links */
+    }
+
+    #menu ul li a {
+        font-size: 24px; /* Larger text for readability */
+        color: white; /* Text color for menu items */
+        text-decoration: none; /* No underlining */
     }
 }
+
