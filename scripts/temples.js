@@ -32,3 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', adjustMenuVisibility);
     adjustMenuVisibility();  // Call on initial load
 });
+
+
+
