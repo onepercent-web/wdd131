@@ -86,39 +86,16 @@ footer {
 }
 
 .menu-button {
-    display: none; 
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    border: none;
-    background: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
+    display: none;  /* not displayed */
 }
 
 /* Mobile views adjustments */
 @media (max-width: 600px) {
 
-    main {
-        grid-template-columns: 1fr; 
-    }
-
-    figure {
-        margin: 0;
-        padding: 5px 0;
-    }
-}
-    
-    img {
-        width: 100%; /* Ensure images are full width */
-        height: auto; /* Maintain aspect ratio */
+.menu-button {
+        display: block;  /* Show button on small screens */
     }
     
-    .menu-button {
-        display: block; /* Ensure the menu button is displayed */
-    }
-
     #menu ul {
         display: none; /* Hide menu until activated */
         flex-direction: column; /* Stack menu items vertically */
@@ -143,11 +120,39 @@ footer {
         color: white; /* Text color for menu items */
         text-decoration: none; /* No underlining */
     }
+
+
+    main {
+        grid-template-columns: 1fr; 
+    }
+
+    figure {
+        margin: 0;
+        padding: 5px 0;
+    }
 }
+    
+    img {
+        width: 100%; /* Ensure images are full width */
+        height: auto; /* Maintain aspect ratio */
+    }    
+
 
 footer {
     padding: 5px 20px;  
     font-size: 16px; 
     position: relative; 
     bottom: auto;  
+}
+
+.menu-button {
+    display: block;  
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }

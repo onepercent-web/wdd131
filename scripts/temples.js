@@ -2,34 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYear = document.getElementById('currentyear');
     const lastModified = document.getElementById('lastModified');
 
-    // display current year
+    // display current year and last modification
     currentYear.textContent = new Date().getFullYear();
     lastModified.textContent = `Last Modification: ${document.lastModified}`;
 
-    // humberger menu
-    const menuButton = document.createElement('button');
-    menuButton.className = 'menu-button';
-    menuButton.innerHTML = '&#9776;';  // Hamburger Icon
-    const header = document.querySelector('header');
-    header.appendChild(menuButton);
-
+    
+    const menuButton = document.querySelector('.menu-button');
     const menu = document.getElementById('menu');
     const menuList = menu.querySelector('ul');
 
-    // menu click
+    // Menu click event
     menuButton.addEventListener('click', function() {
-        menuList.classList.toggle('is-active');
-        const isOpen = menuList.classList.contains('is-active');
+        const isOpen = menuList.classList.toggle('is-active');
         menuButton.innerHTML = isOpen ? '&times;' : '&#9776;';  // Toggle icon based on state
     });
 
-    window.addEventListener('resize', function() {
+    // Adjust menu visibility based on window width
+    function adjustMenuVisibility() {
         if (window.innerWidth > 600) {
-            menuList.style.display = 'flex';  // Always display menu at 600px or more
-            menuButton.style.display = 'none';  // Menu button is hidden
+            menuList.style.display = '';  // Reset to default
+            menuButton.style.display = 'none';  // Hide hamburger button
         } else {
-            menuList.style.display = 'none';  // Hide menu at less than 600px
-            menuButton.style.display = 'block';  // Show menu button
+            menuList.style.display = 'none';  // Hide menu
+            menuButton.style.display = 'block';  // Show hamburger button
         }
-    });
+    }
+
+    // Call adjust function on resize and on load
+    window.addEventListener('resize', adjustMenuVisibility);
+    adjustMenuVisibility();  // Call on initial load
 });
