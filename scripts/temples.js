@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // humberger menu
     const menuButton = document.createElement('button');
     menuButton.className = 'menu-button';
-    menuButton.innerHTML = '&#9776;'; // Hamburger Icon
+    menuButton.innerHTML = '&#9776;';  // Hamburger Icon
     const header = document.querySelector('header');
     header.appendChild(menuButton);
 
@@ -18,19 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // menu click
     menuButton.addEventListener('click', function() {
-        const isOpen = menuList.classList.contains('is-active');
         menuList.classList.toggle('is-active');
-        menuButton.innerHTML = isOpen ? '&#9776;' : '&times;'; 
+        const isOpen = menuList.classList.contains('is-active');
+        menuButton.innerHTML = isOpen ? '&times;' : '&#9776;';  // Toggle icon based on state
     });
 
-    // ウィンドウのリサイズ時にメニューの表示を調整
     window.addEventListener('resize', function() {
         if (window.innerWidth > 600) {
-            menuList.style.display = 'flex'; // Always display menu at 600px or more
-            menuButton.style.display = 'none'; // Menu button is hidden
+            menuList.style.display = 'flex';  // Always display menu at 600px or more
+            menuButton.style.display = 'none';  // Menu button is hidden
         } else {
-            menuList.style.display = 'none'; // Hide menu at less than 600px
-            menuButton.style.display = 'block'; // Show menu button
+            menuList.style.display = 'none';  // Hide menu at less than 600px
+            menuButton.style.display = 'block';  // Show menu button
         }
     });
 });
