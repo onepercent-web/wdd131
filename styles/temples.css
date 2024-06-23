@@ -36,14 +36,6 @@ body {
 }
 
 
-main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1600px;
-    margin: 0 auto;
-}
 
 .home {
     text-align: center;
@@ -54,14 +46,21 @@ main {
 
 }
 
-
-figure {
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+   }
+   
+   figure {
     margin: 0;
     padding: 0;
     width: 100%; 
     box-sizing: border-box;
-    
-}
+   }
 
 img {
     width: 100%;
@@ -100,14 +99,16 @@ footer {
 
 /* Mobile views adjustments */
 @media (max-width: 600px) {
+
     main {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
+        grid-template-columns: 1fr; 
     }
-    
+
     figure {
-        margin: 0; /* Remove margins for tighter mobile layout */
-        padding: 10px 0; /* Add some vertical padding */
+        margin: 0;
+        padding: 5px 0;
     }
+}
     
     img {
         width: 100%; /* Ensure images are full width */
