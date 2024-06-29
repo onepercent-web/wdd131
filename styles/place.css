@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #ef4b3f;
+    --text-color: #000;
+    --background-color: #fff;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ef4b3f;
+}
+header, footer {
+    background-color: #ef4b3f;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+footer {
+    font-size: 20px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.data {
+    background-color: #ffffffa2;
+    padding: 15px;
+    border-radius: 5px;
+    width: 35%;
+    outline: solid #ffffff 5px;
+    margin-bottom: 15%;
+}
+
+.weather {
+    background-color: #ffffffc2;
+    padding: 15px;
+    border-radius: 5px;
+    width: 35%;
+    outline: solid #ffffff 5px;
+}
+
+
+.weather-icon {
+    display: none;
+    
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .overlay {
+        flex-direction: column;
+        align-items: center;
+    }
+    .data, .weather {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .weather h2 {
+        display: flex;
+        align-items: center;
+    }
+    .weather h2::after {
+        content: url(images/sun_icon.svg);
+        margin-left: 10px;
+    }
+    .weather-icon {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .overlay {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .data, .weather {
+        width: 45%;
+    }
+}

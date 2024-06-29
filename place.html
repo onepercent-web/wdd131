@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>JAPAN</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/tokyoview.webp" media="(min-width: 768px)">
+                <img src="images/tokyoview.webp" alt="Tokyo View">
+            </picture>
+            <div class="overlay">
+                <div class="data">
+                    <h2>Data</h2>
+                    <p><strong>Area:</strong> 2,194 sq km</p>
+                    <p><strong>Population:</strong> 13,960,236</p>
+                    <p><strong>Capital:</strong> Tokyo</p>
+                    <p><strong>Languages:</strong> Japanese</p>
+                    <p><strong>Currency:</strong> Japanese Yen</p>
+                    <p><strong>Time Zone:</strong> UTC+9</p>
+                    <p><strong>Calling Code:</strong> +81</p>
+                    <p><strong>Internet TLD:</strong> .jp</p>
+                </div>
+                <div class="weather">
+                    <h2>Weather</h2>
+                    <img src="images/sun_icon.svg" alt="Sun Icon" class="weather-icon">
+                    <p><strong>Temperature:</strong> 25°C</p>
+                    <p><strong>Conditions:</strong> Clear</p>
+                    <p><strong>Wind:</strong> 15 km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Eimi Miyake Tokyo</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
+
