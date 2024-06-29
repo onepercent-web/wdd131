@@ -1,7 +1,7 @@
 :root {
     --primary-color: #ef4b3f;
     --text-color: #000;
-    --background-color: #fff;
+    --background-color: #ffffff;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f0f8e2;
+    background-color: #ffffff;
 }
 
 header, footer {
