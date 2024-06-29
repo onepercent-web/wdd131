@@ -81,7 +81,6 @@ main {
     
 }
 
-
 @media (max-width: 767px) {
     .hero {
         height: auto;
@@ -106,5 +105,15 @@ main {
     .weather-icon {
         display: block;
         margin: 10px auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .overlay {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .data, .weather {
+        width: 45%;
     }
 }
