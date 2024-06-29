@@ -34,6 +34,7 @@ main {
     align-items: center;
     background-color: var(--background-color);
     padding: 10px;
+    overflow-y: auto;
 }
 
 .hero {
@@ -49,13 +50,13 @@ main {
 
 .data, .weather {
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffffa2;
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffffff 5px;
     text-align: center;
 }
+
 
 .data h2, .weather h2 {
     margin-top: 0;
