@@ -110,7 +110,7 @@ main {
         align-items: center;
     }
     .weather h2::after {
-        content: url(images/sun_icon.svg);
+        content: url(images/weather_icon.svg);
         margin-left: 10px;
     }
     .weather-icon {
