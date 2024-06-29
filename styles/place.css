@@ -85,32 +85,40 @@ main {
     body {
         padding: 0;
     }
+
     header, footer {
         padding: 10px;
     }
+
     main {
         flex: 1;
         display: block;
         overflow-y: auto;
     }
+
     .hero {
         height: auto;
     }
+
     .overlay {
         padding: 10px;
         overflow-y: auto; /* Ensure vertical scrolling for mobile */
     }
+
     .data, .weather {
         width: 100%;
     }
+
     .weather h2 {
         display: flex;
         align-items: center;
     }
+
     .weather h2::after {
         content: url(images/weather_icon.svg);
         margin-left: 10px;
     }
+
     .weather-icon {
         display: block;
         margin: 10px auto;
@@ -119,10 +127,11 @@ main {
 
 @media (min-width: 768px) {
     .overlay {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
+
     .data, .weather {
-        width: 45%;
+        width: 90%;
     }
 }
