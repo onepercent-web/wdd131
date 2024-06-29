@@ -32,7 +32,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--background-color);
     padding: 10px;
     overflow-y: auto;
 }
@@ -48,13 +47,24 @@ main {
     height: auto;
 }
 
-.data, .weather {
+.data {
     width: 100%;
     background-color: #ffffffa2;
-    margin: 10px 0;
+    margin: 20px;
     padding: 10px;
     border: 1px solid #ffffff 5px;
-    text-align: center;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+
+.weather {
+    width: 100%;
+    background-color: #ffffffa2;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ffffff 5px;
+    margin-bottom: 10%;
 }
 
 
