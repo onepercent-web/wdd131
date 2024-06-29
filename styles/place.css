@@ -82,6 +82,17 @@ main {
 }
 
 @media (max-width: 767px) {
+    body {
+        padding: 0;
+    }
+    header, footer {
+        padding: 10px;
+    }
+    main {
+        flex: 1;
+        display: block;
+        overflow-y: auto;
+    }
     .hero {
         height: auto;
     }
@@ -91,8 +102,8 @@ main {
         padding: 0;
     }
     .data, .weather {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 90%;
+        margin: 10px 0;
     }
     .weather h2 {
         display: flex;
