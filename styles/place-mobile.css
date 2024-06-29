@@ -38,7 +38,7 @@ main {
 
 .hero {
     text-align: center;
-    width: 100%;
+    width: 90%;
     margin-bottom: 20px;
 }
 
@@ -48,29 +48,30 @@ main {
 }
 
 .data {
-    width: 100%;
-    background-color: #ffffffa2;
-    margin: 20px;
+    width: 90%;
+    background-color: #ffffff70;
+    margin: 20px auto;
     padding: 10px;
-    border: 1px solid #ffffff 5px;
-    margin-left: 5%;
-    margin-top: 10%;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    text-align: center;
 }
 
 
 .weather {
-    width: 100%;
-    background-color: #ffffffa2;
-    margin: 20px;
+    width: 90%;
+    background-color: #ffffff70;
+    margin: 20px auto;
     padding: 10px;
-    border: 1px solid #ffffff 5px;
-    margin-bottom: 10%;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    text-align: center;
 }
 
 
 .data h2, .weather h2 {
     margin-top: 0;
-    color: var(--primary-color);
+    color: #000;
 }
 
 .weather-icon {
