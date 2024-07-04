@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寄付</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="number"] {
+            text-align: right;
+        }
+        .total {
+            font-weight: bold;
+            text-align: right;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 20px;
+        }
+        .buttons {
+            text-align: right;
+        }
+        .buttons button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .clear {
+            background-color: #ccc;
+        }
+        .buttons .next-step {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>寄付スリップ</h1>
+            <p>2024年2月7日</p>
+            <p>日本東京都</p>
+        </div>
+        <div class="form-group">
+            <label for="member-number">メンバーシップ番号</label>
+            <input type="text" id="member-number" placeholder="例: 12345678">
+        </div>
+        <div class="form-group">
+            <label for="tithing">什一献金 (Tithing)</label>
+            <input type="number" id="tithing" placeholder="0.00" step="0.01">
+        </div>
+        <div class="form-group">
+            <label for="fast-offerings">断食献金 (Fast Offerings)</label>
+            <input type="number" id="fast-offerings" placeholder="0.00" step="0.01">
+        </div>
+        <div class="form-group">
+            <label for="general-missionary">一般伝道献金 (General Missionary)</label>
+            <input type="number" id="general-missionary" placeholder="0.00" step="0.01">
+        </div>
+        <div class="form-group">
+            <label for="ward-missionary">地区伝道献金 (Ward Missionary)</label>
+            <select id="ward-missionary">
+                <option value="">伝道者を選択...</option>
+                <option value="missionary1">伝道者1</option>
+                <option value="missionary2">伝道者2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="humanitarian-aid">人道支援 (Humanitarian Aid)</label>
+            <input type="number" id="humanitarian-aid" placeholder="0.00" step="0.01">
+        </div>
+        <div class="form-group">
+            <label for="general-offerings">一般献金 (General Offerings)</label>
+            <input type="number" id="general-offerings" placeholder="0.00" step="0.01">
+        </div>
+        <div class="total">
+            <p>合計金額: <span id="total-amount">0.00</span> 円</p>
+        </div>
+        <div class="note">
+            <p>全ての寄付は教会の所有物となり、教会の使命に従って使用されます。教会は寄付の用途を必要に応じて変更する権利を有します。</p>
+        </div>
+        <div class="buttons">
+            <button class="clear">クリア</button>
+            <button class="next-step">次のステップ</button>
+        </div>
+    </div>
+    <script>
+        // 各寄付金額を合計するスクリプト
+        const inputs = document.querySelectorAll('input[type="number"]');
+        const totalAmount = document.getElementById('total-amount');
+
+        inputs.forEach(input => {
+            input.addEventListener('input', updateTotal);
+        });
+
+        function updateTotal() {
+            let total = 0;
+            inputs.forEach(input => {
+                total += parseFloat(input.value) || 0;
+            });
+            totalAmount.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
