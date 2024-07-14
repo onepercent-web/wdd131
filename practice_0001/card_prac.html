@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic-container {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #fefefe;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 30%;
+    word-wrap: break-word;
+    background-color: #131D26;
+    background-clip: border-box;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 20px #ccc;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.card-image {
+    margin: 2rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.card:hover {
+    box-shadow: 0 10px 20px #999;
+}
+
+
+.card-box {
+    padding: 1rem;
+    background-color: #62C69A;
+    color: white;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-description {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="#" class="card">
+            <img class="card-image" src="https://cdn.pixabay.com/photo/2017/04/01/21/06/portrait-2194457_150.jpg">
+            <div class="card-box">
+                <h2 class="card-title">カードタイトル</h2>
+                <p class="card-description">カードの概要がここに入ります。カードの概要がここに入ります。カードの概要がここに入ります。</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <img class="card-image" src="https://cdn.pixabay.com/photo/2017/04/01/21/06/portrait-2194457_150.jpg">
+            <div class="card-box">
+                <h2 class="card-title">カードタイトル</h2>
+                <p class="card-description">カードの概要がここに入ります。カードの概要がここに入ります。カードの概要がここに入ります。</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <img class="card-image" src="https://cdn.pixabay.com/photo/2017/04/01/21/06/portrait-2194457_150.jpg">
+            <div class="card-box">
+                <h2 class="card-title">カードタイトル</h2>
+                <p class="card-description">カードの概要がここに入ります。カードの概要がここに入ります。カードの概要がここに入ります。</p>
+            </div>
+        </a>
+    </div>
+
+
+</body>
+</html>

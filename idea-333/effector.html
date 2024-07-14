@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>エフェクターのノブ説明サイト</title>
+    <title>Synth Knob Guide - サイトプラン</title>
     <link rel="stylesheet" href="styles/effector.css">
 </head>
 <body>
     <header>
-        <div class="menu-container">
-            <div class="menu-icon" onclick="toggleMenu()">
-                &#9776;
-            </div>
-            <nav id="nav-menu" class="nav-menu">
-                <ul>
-                    <li><a href="efe-home.html">ホーム</a></li>
-                    <li><a href="knobs.html">ノブの説明</a></li>
-                    <li><a href="how-to-use.html">ノブの使い方</a></li>
-                    <li><a href="history.html">エフェクターの歴史</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Synth Knob Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="efe-home.html">ホーム</a></li>
+                <li><a href="knobs.html">ノブの説明</a></li>
+                <li><a href="how-to-use.html">ノブの使い方</a></li>
+                <li><a href="history.html">エフェクターの歴史</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-        <section id="content">
-            <!-- メインコンテンツがここに入ります -->
+        <section id="home">
+            <h2>HOME</h2>
+            <p>サイトの概要</p>
+            <p>ここで学べることと、scenarioページに移動できるように
+            </p>
+            <p>サイトの各ページでは、ノブの詳細な説明、各ノブの機能、そしてエフェクターの歴史について学ぶことができます。</p>
+        </section>
+        <section id="about-knobs">
+            <h2>About Knobs</h2>
+            <p>このページでは、シンセサイザーのノブの基本的な操作方法と、それぞれのノブがどのように音を変化させるかについて説明します。</p>
+            <p>ノブの技術的な背景や理論についても学ぶことができます。</p>
+        </section>
+        <section id="knob-functions">
+            <h2>Knob Functions</h2>
+            <p>ここでは、さまざまな種類のノブの具体的な機能とその使い方について詳しく説明します。</p>
+            <ul>
+                <li>RATE: 速度やテンポに関連する調整</li>
+                <li>CUT OFF: フィルタのカットオフ周波数</li>
+                <li>TIME: ディレイやエコーの時間</li>
+                <li>FEED BACK: ディレイやリバーブのフィードバック量</li>
+                <!-- ほかのノブの説明も同様に続ける -->
+            </ul>
+        </section>
+        <section id="effector-history">
+            <h2>Effector History</h2>
+            <p>エフェクターの歴史について、初期の発展から現代までの進化を紹介します。</p>
+            <p>また、著名なアーティストがエフェクターをどのように使用してきたかについても触れます。</p>
         </section>
     </main>
-
     <footer>
         <p>&copy; <span id="currentyear"></span> Eimi Miyake Japan</p>
         <p id="lastModified"></p>
-        </footer>
-        
-
+    </footer>
     <script src="scripts/effector.js"></script>
 </body>
 </html>
-
-
-<!--
-アイデア2: 音楽エフェクターのノブ解説サイト
-概要:
-
-
- 
--->
