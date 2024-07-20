@@ -1,0 +1,264 @@
+/* Reset and basic styles */
+
+/* 
+
+font-family: "Black Ops One", system-ui; For header
+
+font-family: "Chakra Petch", sans-serif; For body text
+
+font-family: "Play", sans-serif; For knob types
+
+font-family: "Roboto", sans-serif; For Footer
+
+/* 
+#000000; For headings, Footer, paragraphs
+#21F7EF; For hamburger menu, accent
+#ffffff; Background color of the page, headings
+*/
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Chakra Petch", sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 70px;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 70px;
+    font-family: "Black Ops One", system-ui; 
+}
+
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 70px;
+    font-family: "Roboto", sans-serif;
+}
+
+h2 {
+    padding: 5%;
+    color: #21F7EF;
+    text-align: center;
+    font-size: 70px;
+    -webkit-text-stroke: 1px black;
+    text-shadow:
+             4px 5px 0 #000,
+           -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+             1px 1px 0 #000;
+      
+}
+
+
+/* Common styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #21F7EF;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 20px;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 70px;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+    flex-grow: 1;
+}
+
+
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+/* Home page styles */
+.home-page .content {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-page .content-block {
+    margin-bottom: 20px;
+}
+
+.home-page .content-block h2 {
+    margin-bottom: 10px;
+    font-size: 70px;
+}
+
+.home-page .content-block p {
+    font-size: 70px;
+    line-height: 1.5;
+}
+body {
+    text-align: center;
+}
+img {
+    text-align: center;
+}
+
+/* About Knobs page styles */
+.about-page {
+    body {
+        text-align: center;
+    }
+    img {
+        text-align: center;
+    }
+}
+
+/* Knob Types page styles */
+
+.types-page {
+    body {
+        text-align: center;
+        background-color: #21F7EF;
+    }
+    img {
+        text-align: center;
+    }
+    
+   
+    
+}
+
+
+
+.knob-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    font-family: "Play", sans-serif; ;
+   
+}
+
+.knob-card {
+    background-color: #21F7EF;
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    font-size: 70px;
+}
+
+.knob-card.expanded {
+    transform: scale(2);
+    z-index: 10;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+/* History page styles */
+.history-page {
+    body {
+        text-align: center;
+    }
+    img {
+        text-align: center;
+    }
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

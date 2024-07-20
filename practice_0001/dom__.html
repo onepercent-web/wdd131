@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM操作の例</title>
+</head>
+<body>
+    <button id="myButton">クリックしてね</button>
+    <p id="myText">このテキストを変更します。</p>
+
+    <script>
+        // 要素を選択
+        let button = document.getElementById('myButton');
+        let text = document.getElementById('myText');
+
+        // ボタンのテキストを変更
+        button.textContent = '押してみてね';
+
+        // ボタンがクリックされたときの処理を追加
+        button.addEventListener('click', function() {
+            alert('ボタンがクリックされました');
+            text.textContent = 'ボタンがクリックされました！';
+            text.style.color = 'red';
+
+            // 新しい段落要素を作成して追加
+            let newParagraph = document.createElement('p');
+            newParagraph.textContent = 'これは新しい段落です。';
+            document.body.appendChild(newParagraph);
+        });
+    </script>
+</body>
+</html>

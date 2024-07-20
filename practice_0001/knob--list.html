@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knob Details</title>
+    <style>
+        .knob {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 5px;
+            display: inline-block;
+        }
+        #detail {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="knob" data-type="GAIN" data-detail="This knob controls the gain of the signal.">GAIN</div>
+    <div class="knob" data-type="CUT OFF" data-detail="This knob adjusts the cutoff frequency of the filter.">CUT OFF</div>
+    <div class="knob" data-type="DELAY" data-detail="This knob sets the delay time for the effect.">DELAY</div>
+    
+    <div id="detail">
+        ノブの詳細情報がここに表示されます。
+    </div>
+
+    <script>
+        // JavaScriptコード
+
+        // すべてのノブ要素を選択
+        let knobs = document.querySelectorAll('.knob');
+
+        // 各ノブにクリックイベントリスナーを追加
+        knobs.forEach(knob => {
+            knob.addEventListener('click', function() {
+                // ノブのデータ属性からタイプと詳細情報を取得
+                let knobType = this.getAttribute('data-type');
+                let knobDetail = this.getAttribute('data-detail');
+
+                // 詳細情報を表示する要素を選択
+                let detail = document.getElementById('detail');
+
+                // テンプレートリテラルを使って詳細情報を表示
+                detail.innerHTML = `<h2>${knobType}</h2><p>${knobDetail}</p>`;
+            });
+        });
+    </script>
+</body>
+</html>
