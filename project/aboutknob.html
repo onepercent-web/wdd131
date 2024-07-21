@@ -12,36 +12,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
-<body class="home-page">
+<body class="about-page">
+        <header class="main-header">
+            <button class="navbtn" id="navbtn"></button>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutknob.html">About Knobs</a></li>
+                    <li><a href="knobtypes.html">Knob Types</a></li>
+                    <li><a href="history.html">History of Effectors</a></li>
+                </ul>
+            </nav>
+            <h1>Improve Your Sound!</h1>
+        </header>
     <div class="container">
-            <header class="main-header">
-                <h1>Improve Your Sound!</h1>
-                <nav id="nav-links" class="nav-links">
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="aboutknob.html">About Knobs</a></li>
-                        <li><a href="knobtypes.html">Knob Types</a></li>
-                        <li><a href="history.html">History of Effectors</a></li>
-                    </ul>
-                </nav>
-            </header>
         <main class="main-content">
             <section id="operation-knobs">
                 <h2>How do I operate the knobs on an effector?</h2>
-                <img class="about-pic1" src="images/knob10-about1.jpeg" class="history-image" alt="head pic" loading="lazy">
+                <div class="img">
+                <img class="about-pic1" src="images/knob10-about1.jpeg" alt="head pic" loading="lazy">
+                </div>
                 <p>The way to operate the knobs on an effector is very simple, just turn them with your fingers. Turning the knob clockwise increases the value of the effect, while turning it counterclockwise decreases the value. For example, turning a volume knob clockwise increases the volume, and turning it counterclockwise decreases the volume. In this way, you can change the sound. It's good to turn the knobs while listening to the changes in sound. When you connect it to an instrument and play, or apply effects to music from a computer or smartphone, you can create interesting effects by turning the knobs slowly or quickly.</p>
             </section>
             <section id="change-sound">
                 <h2>How does turning the knobs change the sound?</h2>
-                <img class="about-pic2" src="images/knob5-about2.webp" class="history-image" alt="head pic" loading="lazy">
+                <div class="img">
+                <img class="about-pic2" src="images/knob5-about2.webp"  alt="head pic" loading="lazy">
+                </div>
                 <p>By turning the knob, you can finely adjust the sound changes according to its function. For example, with FEEDBACK, turning the knob changes the number of repetitions of the sound. Turning it clockwise increases the repetitions, while turning it counterclockwise decreases them. This can create echo-like effects. Other effectors can change the volume, the amount of distortion, or the brightness or darkness of the sound. At first, the sound changes immediately with just a small turn, so you might have to adjust it repeatedly to find the sound you're looking for. However, as you get used to operating the effector, you will gradually become able to to master it and enjoy creating sounds. Getting to that point is a truly enjoyable journey!</p>
             </section>
-            <footer>
-                <p>&copy; 2024 Eimi Miyake Japan</p>
-                <p>Last modified: <span id="lastModified"></span></p>
-            </footer>
         </main>
-    </div>
+        </div>
+        <footer>
+            <p>&copy; <span id="currentyear"></span> Eimi Miyake Japan</p>
+            <p id="lastModified"></p>
+        </footer>
     <script src="scripts/effector.js"></script>
 </body>
 </html>

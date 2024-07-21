@@ -1,5 +1,3 @@
-/* Reset and basic styles */
-
 /* 
 
 font-family: "Black Ops One", system-ui; For header
@@ -14,49 +12,33 @@ font-family: "Roboto", sans-serif; For Footer
 #000000; For headings, Footer, paragraphs
 #21F7EF; For hamburger menu, accent
 #ffffff; Background color of the page, headings
-*/
+/* Reset and basic styles */
 
-
-
-
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Chakra Petch", sans-serif;
-    color: #000000;
-    background-color: #ffffff;
-    font-size: 70px;
-}
-
-.main-header {
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #000000;
     color: #ffffff;
-    padding: 10px;
-    font-size: 70px;
-    font-family: "Black Ops One", system-ui; 
-}
-
-
-footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 70px;
+    width: 100%;
+    padding: 2%;
     font-family: "Roboto", sans-serif;
+    margin-top: 5%;
 }
 
+
+
+footer p {
+    text-align: center;
+    font-size: 30px;
+}
+p {
+    margin: 20px 0;
+    line-height: 1.6;
+    text-align: justify;
+}
 h2 {
-    padding: 5%;
+    padding: 2%;
     color: #21F7EF;
     text-align: center;
     font-size: 70px;
@@ -70,142 +52,203 @@ h2 {
       
 }
 
-
-/* Common styles */
-.container {
+body {
+    font-family: "Chakra Petch", sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.sidebar {
-    width: 200px;
-    background-color: #21F7EF;
-    padding: 20px;
-    position: fixed;
-    height: 100vh;
-    overflow-y: auto;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;  
 }
 
-.sidebar-header {
+.main-header {
     display: flex;
-    justify-content: flex-end;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 70px;
-    cursor: pointer;
-}
-
-.sidebar-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar-nav li {
-    margin-bottom: 20px;
-}
-
-.sidebar-nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 70px;
-}
-
-.main-content {
-    margin-left: 220px;
-    padding: 20px;
-    width: calc(100% - 220px);
-    flex-grow: 1;
-}
-
-
-
-.menu-btn {
-    background: none;
-    border: none;
-    font-size: 50px;
+    align-items: center;
+    justify-content: center; 
+    background-color: #000000;
     color: #ffffff;
+    width: 100%;
+    padding: 10px 20px;
+    font-family: "Black Ops One", system-ui;
+    position: relative; 
+    margin-bottom: 2%;
+}
+
+.main-header h1 {
+    flex: 1; /* Take remaining space */
+    text-align: center; /* Center text */
+    padding: 2%;
+    margin: 0; 
+}
+
+
+header div {
+    display: none; /* Hide the extra div in the header */
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.792);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s;
+    z-index: 1000; /* Ensure the menu appears above other content */
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 80px;
+}
+
+.open .nav {
+    left: 0; 
+}
+
+.nav :hover {
+    color: #21F7EF;
+}
+
+#navbtn {
+    position: absolute;
+    left: 10px; 
+    outline: none;
+    border: #000000;
+    background-color: #21F7EF; 
+    color: #ffffff;
+    padding: 2%;
+    width: 8.5%; 
+    height: 100%; 
     cursor: pointer;
 }
+
+#navbtn::before,
+#navbtn::after {
+    content: '';
+    display: block;
+    height: 10px; 
+    background-color: #ffffff;
+    transform: translateY(12px); 
+    transition: 0.3s ease-in-out;
+}
+
+#navbtn::before {
+    transform: translateY(-12px); 
+}
+
+.open #navbtn::before {
+    transform: rotate(-45deg);
+    box-shadow: none;
+}
+
+.open #navbtn::after {
+    transform: rotate(45deg);
+    box-shadow: none;
+}
+
+
 
 
 /* Home page styles */
-.home-page .content {
-    background-color: #ffffff;
-    padding: 20px;
-    text-align: center;
+.home-page {
+    font-size: 30px;
 }
 
-.home-page .content-block {
-    margin-bottom: 20px;
+/* Image styles */
+.img {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
 }
 
-.home-page .content-block h2 {
-    margin-bottom: 10px;
-    font-size: 70px;
+.img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.home-page .content-block p {
-    font-size: 70px;
-    line-height: 1.5;
-}
-body {
-    text-align: center;
-}
-img {
-    text-align: center;
+/* Lazy loading with fade-in */
+img.lazy {
+    opacity: 0;
+    transition: opacity 1s ease-out;
 }
 
-/* About Knobs page styles */
+img.lazy-loaded {
+    opacity: 1;
+}
+
 .about-page {
-    body {
-        text-align: center;
-    }
-    img {
-        text-align: center;
-    }
+    text-align: center;
+    font-size: 30px;
 }
+
 
 /* Knob Types page styles */
 
-.types-page {
-    body {
-        text-align: center;
-        background-color: #21F7EF;
-    }
-    img {
-        text-align: center;
-    }
-    
-   
-    
+.knob-page {
+    font-size: 30px;
 }
-
-
-
 .knob-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    font-family: "Play", sans-serif; ;
-   
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .knob-card {
-    background-color: #21F7EF;
+    background-color: #ffffff;
     border: 1px solid #000;
-    padding: 10px;
+    background-color: #21F7EF;
+    padding: 20px;
     text-align: center;
     position: relative;
-    transition: all 0.3s ease-in-out;
-    font-size: 70px;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.knob-card p {
+    font-family: "Play", sans-serif; 
+    letter-spacing: 0;
+    white-space: normal;
+    text-align: left;
 }
 
 .knob-card.expanded {
-    transform: scale(2);
+    transform: scale(1.1);
     z-index: 10;
 }
 
@@ -215,50 +258,58 @@ img {
     right: 5px;
     background: none;
     border: none;
-    font-size: 70px;
+    font-size: 50px;
     cursor: pointer;
+    color: #ffffff;
 }
 
 /* History page styles */
 .history-page {
-    body {
-        text-align: center;
-    }
-    img {
-        text-align: center;
-    }
+    background-color: #ffffff;
+    font-size: 30px;
 }
 
-/* Image styles */
-img {
-    max-width: 100%;
-    height: auto;
+.history-image {
+    width: 100%;
+    object-fit: cover;
+    text-align: center;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
 
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-    }
+.head-pic, .home-pic, .about-pic1, .his-pic1, .his-pic2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .hamburger {
-        display: block;
+/* Media Queries */
+@media (max-width:767px) {
+    html, body {
+        overflow-x: hidden;
     }
-
-    .nav-links {
+    header div {
         display: none;
-        flex-direction: column;
-        width: 100%;
     }
-
-    .nav-links.active {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.9);
+        color: #ffffff;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.5s;
+    }
+    .nav ul {
+        list-style: none;
+    }
+    .nav li:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .nav a {
+        color: #ffffff;
     }
 }
