@@ -284,19 +284,20 @@ img.lazy-loaded {
 
 /* Media Queries */
 @media (max-width: 767px) {
-    html, body {
-        overflow-x: hidden;
+    body {
+        font-size: 14px; /* Smaller text size for mobile */
     }
-    header div {
-        display: none;
+
+    p {
+        font-size: 16px; /* Smaller text size for paragraphs */
+        margin: 10px 0; /* Reduce margins for paragraphs */
     }
-    .main-header {
-        flex-direction: column;
-        padding: 20px;
+
+    h2 {
+        font-size: 36px; /* Smaller text size for headings */
+        padding: 1%;
     }
-    .main-header h1 {
-        font-size: 24px;
-    }
+
     .nav {
         position: fixed;
         top: 0;
@@ -310,31 +311,36 @@ img.lazy-loaded {
         align-items: center;
         transition: left 0.5s;
     }
+
     .nav ul {
         list-style: none;
     }
+
     .nav li:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
+
     .nav a {
-        color: #ffffff;
-        font-size: 24px;
+        font-size: 24px; /* Smaller font size for mobile menu */
+        padding: 10px 20px;
     }
-    .home-page, .about-page, .knob-page, .history-page {
-        font-size: 18px;
-        padding: 10px;
+
+    .main-header {
+        height: 50px; /* Reduce header height */
     }
-    .img {
-        padding: 2%;
+
+    .main-header h1 {
+        font-size: 24px; /* Smaller font size for header text */
     }
-    .img img {
-        width: 100%;
-        height: auto;
+
+    #navbtn {
+        width: 40px; /* Smaller button size */
+        height: 40px;
     }
-    .knob-container {
-        grid-template-columns: 1fr;
-    }
-    .knob-card {
-        max-width: 100%;
+
+    #navbtn::before,
+    #navbtn::after {
+        height: 3px; 
+        width: 20px;
     }
 }
